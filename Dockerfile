@@ -12,3 +12,4 @@ COPY /target/${nombreArtefacto} /opt/
 WORKDIR /opt/
 CMD ["sh", "-c", "java -jar ${nombreArtefacto}"]
 RUN rm -rf /var/cache/apk/*
+#
