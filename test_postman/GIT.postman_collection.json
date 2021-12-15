@@ -1,0 +1,360 @@
+{
+	"info": {
+		"_postman_id": "984d2499-b8bb-48bf-9d30-fb7f2ac30590",
+		"name": "GIT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GIT_API",
+			"item": [
+				{
+					"name": "GetEmployee",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "1171a138-89b2-4a54-ad9b-888001f36be1",
+								"exec": [
+									"pm.test(\"Codigo de estado es 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									" ",
+									"pm.test(\"El tiempo de respuesta debe de ser menor a 900 ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(900);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://lb-reto-1367914012.us-west-2.elb.amazonaws.com:8080/api/v1/employees",
+							"protocol": "http",
+							"host": [
+								"lb-reto-1367914012",
+								"us-west-2",
+								"elb",
+								"amazonaws",
+								"com"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"employees"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "github_Rest",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://api.github.com/",
+									"protocol": "https",
+									"host": [
+										"api",
+										"github",
+										"com"
+									],
+									"path": [
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "GitHub.com"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 27 Mar 2019 19:44:53 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Status",
+									"value": "200 OK"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1553719493"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "public, max-age=60, s-maxage=60"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"7dc470913f1fe9bb6c7355b50a0737bc\""
+								},
+								{
+									"key": "X-GitHub-Media-Type",
+									"value": "github.v3; format=json"
+								},
+								{
+									"key": "Access-Control-Expose-Headers",
+									"value": "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubdomains; preload"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "deny"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "origin-when-cross-origin, strict-origin-when-cross-origin"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'none'"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "X-GitHub-Request-Id",
+									"value": "B781:7DE0:1CA8E3:3AD1CD:5C9BD282"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"current_user_url\": \"https://api.github.com/user\",\n    \"current_user_authorizations_html_url\": \"https://github.com/settings/connections/applications{/client_id}\",\n    \"authorizations_url\": \"https://api.github.com/authorizations\",\n    \"code_search_url\": \"https://api.github.com/search/code?q={query}{&page,per_page,sort,order}\",\n    \"commit_search_url\": \"https://api.github.com/search/commits?q={query}{&page,per_page,sort,order}\",\n    \"emails_url\": \"https://api.github.com/user/emails\",\n    \"emojis_url\": \"https://api.github.com/emojis\",\n    \"events_url\": \"https://api.github.com/events\",\n    \"feeds_url\": \"https://api.github.com/feeds\",\n    \"followers_url\": \"https://api.github.com/user/followers\",\n    \"following_url\": \"https://api.github.com/user/following{/target}\",\n    \"gists_url\": \"https://api.github.com/gists{/gist_id}\",\n    \"hub_url\": \"https://api.github.com/hub\",\n    \"issue_search_url\": \"https://api.github.com/search/issues?q={query}{&page,per_page,sort,order}\",\n    \"issues_url\": \"https://api.github.com/issues\",\n    \"keys_url\": \"https://api.github.com/user/keys\",\n    \"notifications_url\": \"https://api.github.com/notifications\",\n    \"organization_repositories_url\": \"https://api.github.com/orgs/{org}/repos{?type,page,per_page,sort}\",\n    \"organization_url\": \"https://api.github.com/orgs/{org}\",\n    \"public_gists_url\": \"https://api.github.com/gists/public\",\n    \"rate_limit_url\": \"https://api.github.com/rate_limit\",\n    \"repository_url\": \"https://api.github.com/repos/{owner}/{repo}\",\n    \"repository_search_url\": \"https://api.github.com/search/repositories?q={query}{&page,per_page,sort,order}\",\n    \"current_user_repositories_url\": \"https://api.github.com/user/repos{?type,page,per_page,sort}\",\n    \"starred_url\": \"https://api.github.com/user/starred{/owner}{/repo}\",\n    \"starred_gists_url\": \"https://api.github.com/gists/starred\",\n    \"team_url\": \"https://api.github.com/teams\",\n    \"user_url\": \"https://api.github.com/users/{user}\",\n    \"user_organizations_url\": \"https://api.github.com/user/orgs\",\n    \"user_repositories_url\": \"https://api.github.com/users/{user}/repos{?type,page,per_page,sort}\",\n    \"user_search_url\": \"https://api.github.com/search/users?q={query}{&page,per_page,sort,order}\"\n}"
+						}
+					]
+				},
+				{
+					"name": "GetEmployeeById",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "59a4fff8-ea92-4825-9385-12c64ad8d7c4",
+								"exec": [
+									"pm.test(\"Codigo de estado es 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									" ",
+									"pm.test(\"El tiempo de respuesta debe de ser menor a 900 ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(900);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://lb-reto-1367914012.us-west-2.elb.amazonaws.com:8080/api/v1/employees/1",
+							"protocol": "http",
+							"host": [
+								"lb-reto-1367914012",
+								"us-west-2",
+								"elb",
+								"amazonaws",
+								"com"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"employees",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PutEmployee",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2ffdd970-8180-4884-9923-62edbdfd8320",
+								"exec": [
+									"pm.test(\"Codigo de estado es 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									" ",
+									"pm.test(\"El tiempo de respuesta debe de ser menor a 900 ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(900);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"emailId\":\"alexis2@gmail.com\",\n\"firstName\":\"kslss\",\n\"lastName\":\"sfsfs\"\n}"
+						},
+						"url": {
+							"raw": "http://lb-reto-1367914012.us-west-2.elb.amazonaws.com:8080/api/v1/employees/1",
+							"protocol": "http",
+							"host": [
+								"lb-reto-1367914012",
+								"us-west-2",
+								"elb",
+								"amazonaws",
+								"com"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"employees",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostEmployee",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "930608e8-5af8-46bd-a97a-73746dfb9502",
+								"exec": [
+									"pm.test(\"Codigo de estado es 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									" ",
+									"pm.test(\"El tiempo de respuesta debe de ser menor a 900 ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(900);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"emailId\":\"alexis@gmail.com\",\n\"firstName\":\"kslss\",\n\"lastName\":\"sfsfs\"\n}"
+						},
+						"url": {
+							"raw": "http://lb-reto-1367914012.us-west-2.elb.amazonaws.com:8080/api/v1/employees",
+							"protocol": "http",
+							"host": [
+								"lb-reto-1367914012",
+								"us-west-2",
+								"elb",
+								"amazonaws",
+								"com"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"employees"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
