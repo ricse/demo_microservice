@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: onp-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: onp-app
+  template:
+    metadata:
+      labels:
+        app: onp-app
+    spec:
+      containers:
+        - name: onp-app
+          image: acronp.azurecr.io/microservice-onp:4.0
+          ports:
+            - containerPort: 8080

@@ -6,7 +6,7 @@
 
 	<groupId>Service.Reto.Devops</groupId>
 	<artifactId>Service_Demo</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.4</version>
 	<packaging>jar</packaging>
 
 	<name>Service_Demo</name>

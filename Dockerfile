@@ -1,6 +1,6 @@
 FROM mcr.microsoft.com/java/jdk:8u265-zulu-alpine
 LABEL mantainer="Ronal Ricse"
-ARG nombreArtefacto=Service_Demo-0.0.1.jar
+ARG nombreArtefacto=Service_Demo-0.0.4.jar
 ENV nombreArtefacto ${nombreArtefacto}
 RUN apk update && apk upgrade \
 	&& apk add ca-certificates \
@@ -12,4 +12,3 @@ COPY /target/${nombreArtefacto} /opt/
 WORKDIR /opt/
 CMD ["sh", "-c", "java -jar ${nombreArtefacto}"]
 RUN rm -rf /var/cache/apk/*
-#
